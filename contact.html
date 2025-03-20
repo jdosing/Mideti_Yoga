@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mideti - Contactame¡</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="shortcut icon" href="./assets/images/mideti.png" type="image/x-icon">
+</head>
+<body>
+    <header> 
+        <img src="./assets/images/mideti.png" alt="Mideti Kids Yoga" class="logo">
+        <div class="header-h1">
+            <h1>Mideti Kids Yoga</h1>
+            <p>Yoga divertido y educativo para niños.</p>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="./index.html#activities">Actividades</a></li>
+                <li><a href="./index.html#about">¿Quiénes somos?</a></li>
+                <li><a href="./index.html#services">Servicios</a></li>
+                <li><a href="./jobs.html">Trabaja con nosotros</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-section" class="contact">
+            <h2>Contáctanos</h2>
+            <form id="contactForm" class="form-contact">
+              <label for="nombre">Nombre Completo:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+              
+              <label for="correo">Correo Electrónico:</label>
+              <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+              
+              <label for="telefono">Teléfono Celular:</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+              
+              <label for="ciudad">Ciudad:</label>
+              <input type="text" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad" required>
+              
+              <label for="mensaje">Mensaje (Opcional):</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+              
+              <label for="tipoDocumento">Tipo de Documento de Identidad:</label>
+              <select id="tipoDocumento" name="tipoDocumento" required>
+                <option value="">Selecciona una opción</option>
+                <option value="cc">Cédula de Ciudadanía</option>
+                <option value="ti">Tarjeta de Identidad</option>
+                <option value="pasaporte">Pasaporte</option>
+              </select>
+              
+              <label for="areaInteres">Área de Interés:</label>
+              <select id="areaInteres" name="areaInteres" required>
+                <option value="">Selecciona una opción</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="educacion">Educación</option>
+                <option value="salud">Salud</option>
+                <option value="otros">Otros</option>
+              </select>
+              
+              <div class="checkbox-container">
+                <input type="checkbox" id="politica" name="politica" required>
+                <label for="politica">Acepto la política de privacidad y el uso de datos personales</label>
+              </div>
+              
+              <button type="submit" id="submitBtn" class="btn-enviar">Enviar</button>
+            </form>
+          </section>
+            
+        
+        
+    </main>
+
+    <footer>
+        <p>© 2025 Mideti Kids Yoga. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
+

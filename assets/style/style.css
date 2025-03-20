@@ -1,0 +1,357 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5e6; /* Fondo beige pastel */
+    color: #333;
+}
+
+/* Header y navegación */
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: #ffe4e1; /* Fondo rosa pastel */
+    border-bottom: 3px solid #ffb6c1;
+}
+
+.header-h1{
+    text-align: center;
+}
+
+header .logo {
+    width: 10vw;
+    height: 15vh;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 10px 0;
+    color: #ff69b4; /* Rosa fuerte */
+}
+
+nav {
+    margin: 40px 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ff69b4; /* Rosa fuerte */
+    transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: #ff90c1; /* Rosa claro */
+}
+
+/* Secciones generales */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+    display: flex;
+
+    background-color: #e6f7ff; /* Azul claro pastel */
+}
+.about-quien{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services {
+    background-color: #f9f0ff; /* Morado pastel */
+}
+
+.jobs {
+    background-color: #fffacd; /* Amarillo pastel */
+}
+
+.contact {
+    background-color: #e0ffe0; /* Verde pastel */
+}
+
+.activities {
+    background-color: #f5f5f5; /* Fondo gris claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.activities h2 {
+    text-align: center;
+    color: #ff69b4; /* Rosa fuerte */
+    margin-bottom: 20px;
+}
+
+#event-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tarjetas compactas */
+.event-card {
+    flex: 1 1 calc(25% - 15px); /* Ahora ocupan el 25% del ancho por fila */
+    max-width: 250px; /* Tamaño máximo de la tarjeta */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px; /* Reducimos el padding */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img {
+    width: 100%;
+    height: 120px; /* Altura fija para reducir espacio */
+    object-fit: cover; /* Recorta la imagen proporcionalmente si es necesario */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    font-size: 1rem; /* Tamaño de texto más compacto */
+    margin: 5px 0;
+}
+
+.event-card p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff9900; /* Naranja vibrante */
+    margin: 5px 0;
+}
+
+.btn-ver-mas {
+    padding: 8px 12px; /* Botón más pequeño */
+    font-size: 0.9rem;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #ff90c1;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content img {
+    width: 80%;
+    height: 53vh;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn-cerrar {
+    padding: 10px 15px;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-cerrar:hover {
+    background-color: #ff90c1;
+}
+
+/* Contenedor del Carrusel */
+.carousel {
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Carrusel Interno */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Elementos del Carrusel */
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Botones de Navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe4e1;
+    color: #333;
+    font-size: 14px;
+    margin-top: 20px;
+}
+footer a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de Contacto */
+.contact {
+    background-color: #e0ffe0; /* Verde pastel */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    color: #ff69b4; /* Rosa fuerte */
+    margin-bottom: 20px;
+}
+
+.form-contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-contact input,
+.form-contact textarea,
+.form-contact select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-contact textarea {
+    resize: vertical;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container label {
+    margin: 0;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff69b4; /* Rosa */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #d42e75; /* Rosa fuerte */
+}
